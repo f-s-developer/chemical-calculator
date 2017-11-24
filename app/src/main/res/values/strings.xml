@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AIS Calculator</string>
+    <string name="total">合計</string>
+    <string name="calculate">計算！</string>
+    <string name="micro_litter">μL</string>
+    <string name="micro_gram">μg</string>
+</resources>
