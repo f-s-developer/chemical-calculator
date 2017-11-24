@@ -4,4 +4,14 @@
     <string name="calculate">計算！</string>
     <string name="micro_litter">μL</string>
     <string name="micro_gram">μg</string>
+    <string name="a_navigation">作成したい溶液Aの量を入力して下さい</string>
+    <string name="ml">mL</string>
+    <string name="fero_concentration">fero濃度</string>
+    <string name="mg_ml">mg/mL</string>
+    <string name="ampso_value">AMPSO :</string>
+    <string name="fero_value">fero溶液 :</string>
+    <string name="b_navigation">作成したい溶液Bの量を入力して下さい</string>
+    <string name="miliq_value">miliQ :</string>
+    <string name="ais_value">AIS :</string>
+    <string name="mg">mg</string>
 </resources>

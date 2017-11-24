@@ -1,5 +1,6 @@
 package com.example.ryo.aiscalculator;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,22 +27,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        aAMPSOValue = (TextView) findViewById(R.id.a_mili_q_value);
-        aFeroValue = (TextView) findViewById(R.id.a_fero_value);
-        bMiliQValue = (TextView) findViewById(R.id.b_mili_q_value);
-        bAISValue = (TextView) findViewById(R.id.b_ais_value);
+        aAMPSOValue = findViewById(R.id.a_mili_q_value);
+        aFeroValue = findViewById(R.id.a_fero_value);
+        bMiliQValue = findViewById(R.id.b_mili_q_value);
+        bAISValue = findViewById(R.id.b_ais_value);
 
-        aCalculate = (Button) findViewById(R.id.a_button);
+        aCalculate = findViewById(R.id.a_button);
         aCalculate.setOnClickListener(this);
-        bCalculate = (Button) findViewById(R.id.b_button);
+        bCalculate = findViewById(R.id.b_button);
         bCalculate.setOnClickListener(this);
 
-        aGetTotalValue = (EditText) findViewById(R.id.get_total_value_a);
-        aGetFeroValue = (EditText) findViewById(R.id.get_fero_value_a);
-        bGetTotalValue = (EditText) findViewById(R.id.get_total_value_b);
+        aGetTotalValue = findViewById(R.id.get_total_value_a);
+        aGetFeroValue = findViewById(R.id.get_fero_value_a);
+        bGetTotalValue = findViewById(R.id.get_total_value_b);
 
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onClick(View view) {
         if (view == aCalculate) {
@@ -71,9 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     double CalculateA (double fero, double totalValue) {
         double feroValue = 5 / fero;
-        double ampsoValue = totalValue - feroValue;
 
-        return ampsoValue;
+        return totalValue - feroValue;
     }
 
     double CalculateB (double valueOfB) {

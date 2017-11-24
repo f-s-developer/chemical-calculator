@@ -1,281 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ryo.aiscalculator.MainActivity">
 
     <RelativeLayout
-        android:id="@+id/a_relative"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:padding="4dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/navigation_text_a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="作成したい溶液Aの量を入力して下さい"
-            android:textSize="16sp" />
-
-        <LinearLayout
-            android:id="@+id/a_container"
+        <RelativeLayout
+            android:id="@+id/a_relative"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/navigation_text_a"
-            android:orientation="horizontal">
+            android:layout_alignParentStart="true"
+            android:padding="4dp">
 
             <TextView
-                android:text="@string/total"
-                android:textSize="24sp"
-                android:layout_width="0dp"
+                android:id="@+id/navigation_text_a"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:text="@string/a_navigation"
+                android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/get_total_value_a"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:id="@+id/a_container"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:hint="1000"
-                android:textSize="24sp"
-                android:inputType="numberDecimal"/>
+                android:layout_below="@id/navigation_text_a"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="0dp"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/get_total_value_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="1000"
+                    android:inputType="numberDecimal"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ml"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/a_fero_container"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="mL"
-                android:textSize="24sp" />
+                android:layout_below="@id/a_container">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fero_concentration"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/get_fero_value_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="15"
+                    android:inputType="numberDecimal"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mg_ml"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/a_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/a_fero_container"
+                android:text="@string/calculate" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/a_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a_relative"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ampso_value"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/a_mili_q_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="24sp"
+                    tools:text="995.2943" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/micro_litter"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fero_value"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/a_fero_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="24sp"
+                    tools:text="4.70568" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/micro_gram"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/a_fero_container"
+        <RelativeLayout
+            android:id="@+id/b_relative"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/a_container">
+            android:layout_below="@id/a_linear"
+            android:padding="4dp">
 
             <TextView
-                android:text="fero濃度"
-                android:textSize="24sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <EditText
-                android:id="@+id/get_fero_value_a"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:hint="15"
-                android:textSize="24sp"
-                android:inputType="numberDecimal"/>
-
-            <TextView
+                android:id="@+id/navigation_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="mg/mL"
-                android:textSize="24sp" />
+                android:text="@string/b_navigation"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/b_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/navigation_text"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/get_total_value_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="1000"
+                    android:inputType="numberDecimal"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ml"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/b_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/b_container"
+                android:text="@string/calculate" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/b_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/b_relative"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/miliq_value"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/b_mili_q_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="24sp"
+                    tools:text="995.2943" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ml"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ais_value"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/b_ais_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="24sp"
+                    tools:text="4.70568" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/mg"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/a_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/a_fero_container"
-            android:text="@string/calculate" />
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/a_linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/a_relative"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:padding="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="AMPSO :"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:id="@+id/a_mili_q_value"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                tools:text="995.2943"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:text="@string/micro_litter"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:padding="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="fero溶液 :"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:id="@+id/a_fero_value"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                tools:text="4.70568"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:text="@string/micro_gram"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/b_relative"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/a_linear"
-        android:padding="4dp">
-
-        <TextView
-            android:id="@+id/navigation_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="作成したい溶液Bの量を入力して下さい"
-            android:textSize="16sp" />
-
-        <LinearLayout
-            android:id="@+id/b_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/navigation_text"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/get_total_value_b"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:hint="1000"
-                android:textSize="24sp"
-                android:inputType="numberDecimal"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="mL"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/b_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/b_container"
-            android:text="@string/calculate" />
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/b_linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/b_relative"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:padding="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="miliQ :"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:id="@+id/b_mili_q_value"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                tools:text="995.2943"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:text="mL"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:padding="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="AIS :"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:id="@+id/b_ais_value"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                tools:text="4.70568"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:text="mg"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>
