@@ -14,4 +14,25 @@
     <string name="miliq_value">miliQ :</string>
     <string name="ais_value">AIS :</string>
     <string name="mg">mg</string>
+    <string name="element_name_h">H(水素)</string>
+    <string name="element_name_he">He(ヘリウム)</string>
+    <string name="element_name_li">Li(リチウム)</string>
+    <string name="element_name_be">Be(ベリリウム)</string>
+    <string name="element_name_b">B(ホウ素)</string>
+    <string name="element_name_c">C(炭素)</string>
+    <string name="element_name_n">N(窒素)</string>
+    <string name="element_name_o">O(酸素)</string>
+    <string name="element_name_f">F(フッ素)</string>
+    <string name="element_name_ne">Ne(ネオン)</string>
+    <string name="element_name_na">Na(ナトリウム)</string>
+    <string name="element_name_mg">Mg(マグネシウム)</string>
+    <string name="element_name_al">Al(アルミニウム)</string>
+    <string name="element_name_si">Si(珪素)</string>
+    <string name="element_name_p">P(リン)</string>
+    <string name="element_name_s">S(硫黄)</string>
+    <string name="element_name_cl">Cl(塩素)</string>
+    <string name="element_name_ar">Ar(アルゴン)</string>
+    <string name="element_name_k">K(カリウム)</string>
+    <string name="element_name_ca">Ca(カルシウム)</string>
+    <string name="no_1">1</string>
 </resources>
